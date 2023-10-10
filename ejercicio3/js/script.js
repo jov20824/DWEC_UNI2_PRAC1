@@ -3,15 +3,10 @@ var equiposs = new Array("At.Madrid","Real Madrid","FC Barcelona","Sevilla",
 "Betis","Granada","Oviedo","Sporting","Alavés", "Celta","Villareal","Getafe","Espanyol",
 "Málaga","At.Bilbao","Rayo Vallecano","Osasuna","Mallora","Cádiz","Levante");
 
-var mapaEquipos = new Map();
-for (let i=0;i<equipos.length;i++){
-    mapaEquipos.set(equipos[i],equiposs[i]);
-}
-
 for (let i=0;i<equipos.length;i++){
     equipos[i]= new Array(20);
 }
-//console.table(equiposs);
+
 function generaSimbolos(){
     let listaSimbolos = ["X",1,2];
     let aleatorio = Math.round(Math.random()*2);
@@ -54,5 +49,5 @@ function pedirEquipos(quini){
 
 
 var quiniela = generaResultados(equipos);
-console.table(quiniela)
+console.table(quiniela);
 pedirEquipos(quiniela);
